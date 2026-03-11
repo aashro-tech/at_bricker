@@ -1,0 +1,11 @@
+name: aashro/footer-map-image-section
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    Label: 'Header'
+  - identifier: image
+    useExistingField: true
+    label: 'Image'
+    maxitems: 1
+    minitems: 1

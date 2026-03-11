@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:asset.css identifier="gallery-section">
+        .gallery-section a { pointer-events: none; }
+        .gallery-section.grid.margin { display: grid;grid-column-gap: 20px;margin: 0 auto;grid-template-columns: repeat(12, 1fr);width: 100%; }
+        .gallery-section.grid .m-6 { grid-column: span 6; }
+        .gallery-section .margin-bottom { margin-bottom: 1.25rem !important; }
+    </f:asset.css>
+
+    <f:if condition="{data.bodytext}">
+        <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+    </f:if>
+    <f:if condition="{data.gallery}">
+        <section class="grid margin gallery-section">
+            <f:for each="{data.gallery}" as="item">
+                <f:if condition="{item.image.0.link}">
+                    <f:then>
+                        <f:link.typolink parameter="{item.image.0.link}" class="s-12 m-6 margin-bottom">
+                            <f:image image="{item.image.0}" class="full-img" />
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <f:image image="{item.image.0}" class="s-12 m-6 margin-bottom" />
+                    </f:else>
+                </f:if>
+            </f:for>
+        </section>
+    </f:if>
+
+</html>

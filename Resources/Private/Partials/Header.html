@@ -1,0 +1,22 @@
+<header class="grid">
+    <f:if condition="{MainMenu}">
+        <f:render section="MainMenu" arguments="{_all}" />
+    </f:if>
+</header>
+
+<f:section name="MainMenu">
+    <nav class="s-12 grid background-none background-primary-hightlight">
+        <f:if condition="{settings.logo} || {settings.logoLink}">
+            <f:link.page pageUid="{settings.logoLink}" class="m-12 l-3 padding-2x logo">
+                <img src="{settings.logo}" alt="Logo">
+            </f:link.page>
+        </f:if>
+        <div class="top-nav s-12 l-9"> 
+            <ul class="top-ul right chevron">
+                <f:for each="{MainMenu}" as="item">
+                    <li class="{f:if(condition: item.active, then: 'active-item')}"><a href="{item.link}">{item.title}</a></li>
+                </f:for>
+            </ul>
+        </div>
+    </nav>
+</f:section>

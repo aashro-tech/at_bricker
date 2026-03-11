@@ -1,0 +1,9 @@
+name: aashro/footer-text-section
+prefixFields: false
+fields:
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: default
+    label: 'Text'
+    required: 1

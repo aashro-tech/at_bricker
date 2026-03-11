@@ -1,0 +1,13 @@
+name: aashro/text-centered-half-width
+prefixFields: false
+fields:
+  - identifier: color1
+    type: Color
+    label: 'Background color'
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: default
+    label: 'Text'
+    description: 'Add class for heading h2 "Capitalize h2 white" and for paragraph add class "Centered paragraph width 50%" from drop-down of class list.'
+    required: 1

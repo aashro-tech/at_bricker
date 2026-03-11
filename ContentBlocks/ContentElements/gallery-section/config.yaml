@@ -1,0 +1,24 @@
+name: aashro/gallery-section
+prefixFields: false
+fields:
+  - identifier: bodytext
+    useExistingField: true
+    label: 'Text'
+    description: 'Add class "Small fonts h2 white" for small heading'
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: gallery
+    label: 'Add gallery'
+    minitems: 1
+    type: Collection
+    labelField: image
+    Label: ''
+    maxitems: 20
+    fields:
+      - identifier: image
+        type: File
+        label: 'Image'
+        description: 'If you want to add link on image add it inside "Image Metadata" link field'
+        minitems: 1
+        maxitems: 1
+        allowed: common-image-types

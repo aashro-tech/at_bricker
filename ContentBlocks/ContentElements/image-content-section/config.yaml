@@ -1,0 +1,45 @@
+name: aashro/image-content-section
+prefixFields: false
+fields:
+  - identifier: textarea
+    type: Textarea
+    label: Header & Description
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: image
+    type: Palette
+    label: 'Image part'
+    fields:
+      - identifier: image
+        useExistingField: true
+        label: 'Image'
+        maxitems: 1
+        minitems: 1
+      - identifier: select
+        type: Select
+        label: 'Select Image Position.'
+        description: 'Select the side on which the image should be displayed (left or right).'
+        renderType: selectSingle
+        items:
+          - label: 'Right'
+            value: 0
+          - label: 'Left'
+            value: 1
+  - identifier: text
+    type: Palette
+    label: 'Text part'
+    fields:
+      - identifier: bodytext
+        useExistingField: true
+        label: 'Text'
+        enableRichtext: true
+        richtextConfiguration: default
+      - identifier: color1
+        type: Color
+        label: 'Background color'
+        default: '#C81010'
+      - identifier: gap
+        type: Checkbox
+        renderType: checkboxToggle
+        default: 0
+        label: 'Remove gap b/w image and content'

@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    
+    <f:if condition="{data.features}">
+        <section class="grid margin margin-bottom padding-2x background-primary features-section" style="background-color: {data.color1} !important;">
+            <f:for each="{data.features}" as="feature">
+                <f:if condition="{feature.content}">
+                    <div class="s-12 m-6 l-3">
+                        <f:format.html>{feature.content}</f:format.html>
+                    </div>
+                </f:if>
+            </f:for>
+        </section>
+    </f:if>
+</html>

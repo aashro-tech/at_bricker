@@ -1,0 +1,41 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:asset.css identifier="socialmedia">
+        .socialmedia a { pointer-events: none;display: grid; }
+        .socialmedia.grid.margin {display: grid;grid-column-gap: 20px;margin: 0 auto;grid-template-columns: repeat(12, 1fr);width: 100%;}
+        .socialmedia.grid .l-4 {grid-column: span 4;}
+        .socialmedia .padding-2x {padding: 1.5rem !important;}
+        .socialmedia .text-strong {font-weight: 700;}
+        .socialmedia .grid .l-2 {grid-column: span 2;}
+        .socialmedia .text-center .vertical-center * { justify-content: center;}
+        .socialmedia .box-image {width: 60px;height: 61px;justify-self: center;margin: auto;grid-column: 1 / -1;}
+        .socialmedia .margin-bottom-15 {margin-bottom: 35px !important;}
+        .socialmedia .vertical-center { display: inline-grid !important;grid-column: span 2; }
+    </f:asset.css>
+
+    <f:if condition="{data.socialmedia}">
+        <section class="grid margin text-center socialmedia">
+            <f:if condition="{data.bodytext} && {data.select}">
+                <div class="m-12 l-4 padding-2x background-dark margin-bottom text-right">
+                    <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+                </div>
+            </f:if>
+            <f:for each="{data.socialmedia}" as="media">
+                <f:if condition="{media.image.0}">
+                    <div class="s-12 m-6 l-2 padding vertical-center margin-bottom facebook hover-zoom" style="background-color: {media.bgcolor};">
+                        <f:link.typolink parameter="{media.image.0.link}">
+                            <f:image image="{media.image.0}" class="box-image margin-bottom-15" />
+                        </f:link.typolink>
+                    </div>
+                </f:if>
+            </f:for>
+            <f:if condition="{data.bodytext} && !{data.select}">
+                <div class="m-12 l-4 padding-2x background-dark margin-bottom text-right">
+                    <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+                </div>
+            </f:if>
+        </section>
+    </f:if>
+
+</html>

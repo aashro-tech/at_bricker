@@ -1,0 +1,22 @@
+name: aashro/hero-slider-section
+prefixFields: false
+fields:
+  - identifier: carousel
+    label: 'Create slides'
+    minitems: 1
+    type: Collection
+    labelField: content
+    Label: 
+    maxitems: 20
+    fields:
+      - identifier: image
+        type: File
+        label: 'Image'
+        minitems: 1
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: content
+        type: Textarea
+        label: 'Text'
+        enableRichtext: true
+        richtextConfiguration: default

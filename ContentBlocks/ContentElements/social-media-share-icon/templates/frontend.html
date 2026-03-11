@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    <f:if condition="{data.socialmedia}">
+        <section class="grid margin text-center socialmedia">
+            <f:if condition="{data.bodytext} && {data.select}">
+                <div class="m-12 l-4 padding-2x background-dark margin-bottom text-right">
+                    <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+                </div>
+            </f:if>
+            <f:for each="{data.socialmedia}" as="media">
+                <f:if condition="{media.image.0}">
+                    <div class="s-12 m-6 l-2 padding vertical-center margin-bottom facebook hover-zoom" style="background-color: {media.bgcolor};">
+                        <f:link.typolink parameter="{media.image.0.link}">
+                            <f:image image="{media.image.0}" class="box-image" />
+                        </f:link.typolink>
+                    </div>
+                </f:if>
+            </f:for>
+            <f:if condition="{data.bodytext} && !{data.select}">
+                <div class="m-12 l-4 padding-2x background-dark margin-bottom text-right">
+                    <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+                </div>
+            </f:if>
+        </section>
+    </f:if>
+</html>

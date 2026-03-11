@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-02-19T06:59:56+00:00" product-name="aashro/text-centered-half-width">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Bricker - Text in centered</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Content which is showing in 50% width.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

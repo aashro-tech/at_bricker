@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <f:if condition="{data.header} && {data.header_link}">
+        <section class="grid margin-bottom">
+            <div class="s-12 padding-2x background-dark">
+                <f:variable name="buttonStyle" value="background-color: {data.color1} !important;" />
+                <f:link.typolink parameter="{data.header_link}" class="s-12 m-9 l-3 center button text-size-20 text-white" additionalAttributes="{style=buttonStyle}">
+                    {data.header}
+                </f:link.typolink>
+            </div>
+        </section>
+    </f:if>
+</html>

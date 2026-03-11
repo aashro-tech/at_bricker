@@ -1,0 +1,85 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <section class="grid margin text-center box-section">
+        <f:if condition="{data.image.0} && {data.select}">
+            <f:image image="{data.image.0}" class="m-12 l-6 l-row-2 margin-bottom" maxWidth="750" />
+        </f:if>
+
+        <f:if condition="{data.image1.0}">
+            <f:if condition="{data.image1.0.link}">
+                <f:then>
+                    <f:variable name="bgStyle" value="background-color: {data.color1} !important;" />
+                    <f:link.typolink class="s-12 m-6 l-3 padding-2x margin-bottom background-red box-div" parameter="{data.image1.0.link}" additionalAttributes="{style=bgStyle}">
+                        <f:image image="{data.image1.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text1}</h3>
+                    </f:link.typolink>
+                </f:then>
+                <f:else>
+                    <a href="javascript:;" class="s-12 m-6 l-3 padding-2x margin-bottom background-red box-div" style="background-color: {data.color1} !important;">
+                        <f:image image="{data.image1.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text1}</h3>
+                    </a>
+                </f:else>
+            </f:if>
+        </f:if>
+
+        <f:if condition="{data.image2.0}">
+            <f:if condition="{data.image2.0.link}">
+                <f:then>
+                    <f:variable name="bgStyle1" value="background-color: {data.color2} !important;" />
+                    <f:link.typolink parameter="{data.image2.0.link}" class="s-12 m-6 l-3 padding-2x margin-bottom background-blue box-div" additionalAttributes="{style=bgStyle1}">
+                        <f:image image="{data.image2.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text2}</h3>
+                    </f:link.typolink>
+                </f:then>
+                <f:else>
+                    <a href="javascript:;" class="s-12 m-6 l-3 padding-2x margin-bottom background-blue box-div" style="background-color: {data.color2} !important;">
+                        <f:image image="{data.image2.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text2}</h3>
+                    </a>
+                </f:else>
+            </f:if>
+        </f:if>
+
+        <f:if condition="{data.image.0} && !{data.select}">
+            <f:image image="{data.image.0}" class="m-12 l-6 l-row-2 margin-bottom" maxWidth="750" />
+        </f:if>
+          
+        <f:if condition="{data.image3.0}">
+            <f:if condition="{data.image3.0.link}">
+                <f:then>
+                    <f:variable name="bgStyle1" value="background-color: {data.color3} !important;" />
+                    <f:link.typolink parameter="{data.image3.0.link}" class="s-12 m-6 l-3 padding-2x margin-bottom background-orange box-div" additionalAttributes="{style=bgStyle1}">
+                        <f:image image="{data.image3.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text3}</h3>
+                    </f:link.typolink>
+                </f:then>
+                <f:else>
+                    <a href="javascript:;" class="s-12 m-6 l-3 padding-2x margin-bottom background-orange box-div" style="background-color: {data.color3} !important;">
+                        <f:image image="{data.image3.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text3}</h3>
+                    </a>
+                </f:else>
+            </f:if>
+        </f:if>
+
+        <f:if condition="{data.image4.0}">
+            <f:if condition="{data.image4.0.link}">
+                <f:then>
+                    <f:variable name="bgStyle1" value="background-color: {data.color4} !important;" />
+                    <f:link.typolink parameter="{data.image4.0.link}" class="s-12 m-6 l-3 padding-2x margin-bottom background-aqua box-div" additionalAttributes="{style=bgStyle1}">
+                        <f:image image="{data.image4.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text4}</h3>
+                    </f:link.typolink>
+                </f:then>
+                <f:else>
+                    <a href="javascript:;" class="s-12 m-6 l-3 padding-2x margin-bottom background-aqua box-div" style="background-color: {data.color4} !important;">
+                        <f:image image="{data.image4.0}" class="box-image margin-bottom-15" />
+                        <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text4}</h3>
+                    </a>
+                </f:else>
+            </f:if>
+        </f:if>
+    </section>
+</html>

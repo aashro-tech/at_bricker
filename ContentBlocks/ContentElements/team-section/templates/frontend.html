@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    
+    <f:if condition="{data.team}">
+        <section class="grid margin team-section heading-mix">
+            <div class="s-12 text-white text-thin text-size-30 text-white text-uppercase margin-top-bottom-20 center text-center">
+                <f:if condition="{data.bodytext}">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </f:if>
+            </div>
+            <f:for each="{data.team}" as="member">
+                <div class="s-12 m-6 l-2 margin-bottom">
+                    <f:if condition="{member.image.0}">
+                        <f:image image="{member.image.0}" maxWidth="400" />
+                    </f:if>
+                    <div class="text-strong">
+                        <f:if condition="{member.content}">
+                            <f:format.html>{member.content}</f:format.html>
+                        </f:if> 
+                    </div>
+                </div>
+            </f:for>
+        </section>
+    </f:if>
+</html>

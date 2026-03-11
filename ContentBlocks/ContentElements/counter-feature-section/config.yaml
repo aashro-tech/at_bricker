@@ -1,0 +1,21 @@
+name: aashro/counter-feature-section
+prefixFields: false
+fields:
+  - identifier: color1
+    type: Color
+    label: 'Background color'
+    default: '#C81010'
+  - identifier: features
+    label: 'Create feture'
+    minitems: 1
+    type: Collection
+    labelField: content
+    Label: 
+    maxitems: 20
+    fields:
+      - identifier: content
+        type: Textarea
+        label: 'Text'
+        enableRichtext: true
+        richtextConfiguration: default
+        required: 1

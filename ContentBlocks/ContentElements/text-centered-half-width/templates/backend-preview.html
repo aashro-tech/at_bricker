@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:asset.css identifier="footer-text-section">
+        .text-section a { pointer-events: none; }
+        .text-section .grid {max-width: 20rem;}
+        .text-section.section {padding: 4rem 1.25rem;}
+        .text-section .l-6, .text-section.grid .l-6.center {width: 50%;}
+        .text-section.grid .center {justify-self: center;margin: auto;grid-column: 1 / -1;}
+        .text-section p { color: #7697A2;margin-top: 10px !important; }
+    </f:asset.css>
+
+    <f:if condition="{data.bodytext}">
+        <section class="grid section margin-bottom background-dark text-section" style="background-color: {data.color1} !important">
+            <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+        </section>
+    </f:if>
+</html>

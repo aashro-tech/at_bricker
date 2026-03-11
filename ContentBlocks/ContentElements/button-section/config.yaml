@@ -1,0 +1,15 @@
+name: aashro/button-section
+prefixFields: false
+fields:
+  - identifier: header
+    useExistingField: true
+    label: 'Button label'
+    required: 1
+  - identifier: header_link
+    useExistingField: true
+    label: 'Button link'
+    required: 1
+  - identifier: color1
+    type: Color
+    label: 'Background color'
+    default: '#C81010'

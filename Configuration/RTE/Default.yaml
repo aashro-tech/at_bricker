@@ -1,0 +1,61 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+editor:
+    config:
+
+        stylesSet:
+            - { name: "White text", element: "h2", attributes: { 'class': 'text-white' } }
+            - { name: "White text h1", element: "h1", attributes: { 'class': 'text-white' } }
+            - { name: "White text p", element: "p", attributes: { 'class': 'text-white' } }
+            - { name: "Small font-size p", element: "p", attributes: { 'class': 'text-size-12' } }
+            - { name: "Small font-size a", element: "a", attributes: { 'class': 'text-size-12' } }
+            - { name: "Margin bottom 15", element: "h3", attributes: { 'class': 'mb-15' } }
+            - { name: "Margin bottom 15 h2", element: "h2", attributes: { 'class': 'mb-15' } }
+            - { name: "Margin top 30", element: "h2", attributes: { 'class': 'margin-top-30' } }
+            - { name: "Big white font", element: "h2", attributes: { 'class': 'big-white-font' } }
+            - { name: "Dark Navy Blue", element: "h2", attributes: { 'class': 'text-dark-navy-blue' } }
+            - { name: "UPPERCASE", element: "h2", attributes: { 'class': 'text-uppercase' } }
+        toolbarGroups:
+            - { name: styles, groups: [ format, styles ] }
+            - { name: basicstyles, groups: [ basicstyles ] }
+            - { name: paragraph, groups: [ list, indent, blocks, align ] }
+            - "/"
+            - { name: links, groups: [ links ] }
+            - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+            - { name: editing, groups: [ spellchecker ] }
+            - { name: insert, groups: [ insert ] }
+            - { name: tools, groups: [ table, specialchar ] }
+            - { name: document, groups: [ mode ] }
+
+        format_tags: "p;h1;h2;h3;h4;h5;h6;span;pre"
+        format_span: { name : 'Span', element : 'span'}
+
+        justifyClasses:
+            - text-left
+            - text-center
+            - text-right
+            - text-justify
+
+        extraPlugins:
+            - justify
+
+        extraAllowedContent:
+            - span
+
+        removePlugins:
+            - image
+
+        removeButtons:
+            - Anchor
+            - Underline
+            - Strike
+processing:
+  allowTags:
+    - span
+  HTMLparser_db:
+    tags:
+      span:
+        rmTagIfNoAttrib: false

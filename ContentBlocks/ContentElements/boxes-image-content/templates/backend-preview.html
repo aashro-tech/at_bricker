@@ -1,0 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:asset.css identifier="box-section">
+        .box-section a { pointer-events: none; }
+        .box-section.grid.margin { display: grid;grid-column-gap: 20px;margin: 0 auto;grid-template-columns: repeat(12,1fr);width: 100%; }
+        .box-section.grid .m-6 { width: auto; }
+        .box-section .text-center { text-align: center !important; }
+        .grid .l-row-2 { grid-row: span 2; }
+        .grid .l-6 { grid-column: span 6; }
+        .box-section.grid .l-3 { grid-column: span 3; }
+        .box-section .box-div { display: grid; }
+        .box-section .padding-2x { padding: 2.5rem !important; }
+        .box-section .box-image { width: 60px;height: 61px;justify-self: center;margin: auto;grid-column: 1 / -1; }
+        .box-section .margin-bottom-15 { margin-bottom: 15px !important; }
+    </f:asset.css>
+
+    <section class="grid margin text-center box-section">
+        <f:if condition="{data.image.0} && {data.select}">
+            <f:image image="{data.image.0}" class="m-12 l-6 l-row-2 margin-bottom"/>
+        </f:if>
+
+        <f:if condition="{data.image1.0}">
+            <div class="s-12 m-6 l-3 padding-2x margin-bottom background-red box-div" style="background-color: {data.color1} !important;">
+                <f:link.typolink parameter="{data.image1.0.link}">
+                    <f:image image="{data.image1.0}" class="box-image margin-bottom-15" />
+                    <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text1}</h3>
+                </f:link.typolink>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.image2.0}">
+            <div class="s-12 m-6 l-3 padding-2x margin-bottom background-blue box-div" style="background-color: {data.color2} !important;">
+                <f:link.typolink parameter="{data.image2.0.link}">
+                    <f:image image="{data.image2.0}" class="box-image margin-bottom-15" />
+                    <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text2}</h3>
+                </f:link.typolink>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.image.0} && !{data.select}">
+            <f:image image="{data.image.0}" class="m-12 l-6 l-row-2 margin-bottom"/>
+        </f:if>
+          
+        <f:if condition="{data.image3.0}">
+            <div class="s-12 m-6 l-3 padding-2x margin-bottom background-orange box-div" style="background-color: {data.color3} !important;">
+                <f:link.typolink parameter="{data.image3.0.link}">
+                    <f:image image="{data.image3.0}" class="box-image margin-bottom-15" />
+                    <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text3}</h3>
+                </f:link.typolink>
+            </div>
+        </f:if>
+
+        <f:if condition="{data.image4.0}">
+            <div class="s-12 m-6 l-3 padding-2x margin-bottom background-aqua box-div" style="background-color: {data.color4} !important;">
+                <f:link.typolink parameter="{data.image4.0.link}">
+                    <f:image image="{data.image4.0}" class="box-image margin-bottom-15" />
+                    <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-30 text-uppercase">{data.text4}</h3>
+                </f:link.typolink>
+            </div>
+        </f:if>
+    </section>
+</html>

@@ -1,0 +1,11 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <f:if condition="{data.bodytext}">
+        <section class="grid section margin-bottom background-dark text-section" style="background-color: {data.color1} !important">
+            <div class="s-12 l-6 center text-thin text-size-30 text-white">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+        </section>
+    </f:if>
+</html>

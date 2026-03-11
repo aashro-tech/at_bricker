@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-02-19T06:59:56+00:00" product-name="aashro/image-content-section">
+		<header/>
+		<body>
+			<trans-unit id="title">
+				<source>Bricker - Image content 50% 50%</source>
+			</trans-unit>
+			<trans-unit id="description">
+				<source>Add image and content with background color with 50% width of each.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

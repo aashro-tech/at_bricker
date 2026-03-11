@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+      
+    <f:if condition="{data.bodytext}">
+        <header class="grid text-content">
+            <div class="s-12 padding-2x text-uppercase">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+        </header>
+    </f:if>
+    <f:if condition="{data.address} || {data.map}">
+        <section class="grid margin-bottom-20 address-map">
+            <div class="m-12 l-7 center">
+                <f:if condition="{data.address}">
+                    <div class="s-12 padding-2x background-white text-center">                  
+                        <f:format.html>{data.address}</f:format.html>
+                    </div>
+                </f:if>
+                <f:if condition="{data.map}">
+                    <f:format.raw>{data.map}</f:format.raw>
+                </f:if>
+            </div>                  
+        </section>
+    </f:if>
+</html>

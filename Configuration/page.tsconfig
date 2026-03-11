@@ -1,0 +1,50 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      home {
+        title = Home page Layout
+        config {
+          backend_layout {
+            colCount = 12
+            rowCount = 2
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = Footer Left
+                    colPos = 1
+                    colspan = 3
+                  }
+                  2 {
+                    name = Footer Center
+                    colPos = 2
+                    colspan = 3
+                  }
+                  3 {
+                    name = Footer Center
+                    colPos = 3
+                    colspan = 3
+                  }
+                  4 {
+                    name = Footer Right
+                    colPos = 4
+                    colspan = 3
+                  }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                    name = Footer copyright
+                    colPos = 0
+                    colspan = 12
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

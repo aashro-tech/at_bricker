@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:asset.css identifier="contact-text-content">
+        .contact-text-content a { pointer-events: none; }
+        .contact-text-content { background-color: #fff; padding: 20px 0; }
+        .address-map h2 { color: #002633; }
+        .address-map p { color: #999; }
+    </f:asset.css>
+
+    <f:if condition="{data.bodytext}">
+        <header class="grid">
+            <div class="s-12 padding-2x text-uppercase">
+                <f:sanitize.html>{data.bodytext}</f:sanitize.html>
+            </div>
+        </header>
+    </f:if>
+    <f:if condition="{data.address} || {data.map}">
+        <section class="grid margin-bottom-20 address-map contact-text-content">
+            <div class="m-12 l-7 center">
+                <f:if condition="{data.address}">
+                    <div class="s-12 padding-2x background-white text-center">                  
+                        <f:sanitize.html>{data.address}</f:sanitize.html>
+                    </div>
+                </f:if>
+            </div>                  
+        </section>
+    </f:if>
+</html>

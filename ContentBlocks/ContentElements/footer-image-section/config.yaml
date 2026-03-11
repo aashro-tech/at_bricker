@@ -1,0 +1,9 @@
+name: aashro/footer-image-section
+prefixFields: false
+fields:
+  - identifier: image
+    useExistingField: true
+    label: 'Image'
+    maxitems: 1
+    minitems: 1
+    description: 'If you want to add link on image add it inside "Image Metadata" link field'

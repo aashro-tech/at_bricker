@@ -1,0 +1,21 @@
+name: aashro/address-map-section
+typeName: aashro_addressmapsection
+group: default
+prefixFields: false
+fields:
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+    richtextConfiguration: default
+    label: 'Text'
+    required: 1
+  - identifier: address
+    type: Textarea
+    label: 'Addresses & Emails'
+    enableRichtext: true
+    richtextConfiguration: default
+    required: 1
+  - identifier: map
+    type: Textarea
+    label: 'Attach Iframe of Map'
+    description: 'Maps'

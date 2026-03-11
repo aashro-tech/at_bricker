@@ -1,0 +1,28 @@
+name: aashro/team-section
+prefixFields: false
+fields:
+  - identifier: bodytext
+    useExistingField: true
+    label: 'Header'
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: team
+    label: 'Add member'
+    minitems: 1
+    type: Collection
+    labelField: content
+    Label: 
+    maxitems: 20
+    fields:
+      - identifier: image
+        type: File
+        label: 'Image'
+        minitems: 1
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: content
+        type: Textarea
+        label: 'Text'
+        enableRichtext: true
+        richtextConfiguration: default
+        required: 1

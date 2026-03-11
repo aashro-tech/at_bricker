@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+    
+    <f:if condition="{data.carousel}">
+        <section class="grid top-slider">
+            <f:if condition="{data.carousel -> f:count()} > 1">
+                <f:then>
+                    <f:variable name="class">carousel-fade-transition owl-carousel carousel-main carousel-nav-white carousel-hide-arrows</f:variable>
+                </f:then>
+                <f:else>
+                    <f:variable name="class">single-item</f:variable>
+                </f:else>
+            </f:if>
+            <div class="s-12 margin-bottom {class} background-dark">
+                <f:for each="{data.carousel}" as="carousel">
+                    <f:if condition="{carousel.image.0}">
+                        <f:variable name="src"><f:uri.image image="{carousel.image.0}" maxWidth="1520" treatIdAsReference="1" /></f:variable>
+                    </f:if>
+                    <div class="item background-image" style="background-image:url('{src}')">
+                        <f:if condition="{carousel.content}">
+                            <f:format.html>{carousel.content}</f:format.html>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </section>
+    </f:if>
+</html>

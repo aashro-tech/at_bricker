@@ -1,0 +1,93 @@
+name: aashro/boxes-image-content
+prefixFields: false
+
+fields:
+  - identifier: box1
+    type: Palette
+    label: 'Box 1 (First Row)'
+    fields:
+      - identifier: color1
+        type: Color
+        label: 'Background color'
+        default: '#C81010'
+      - identifier: image1
+        type: File
+        label: 'Icon'
+        allowed: common-media-types
+        minitems: 1
+        maxitems: 1
+      - identifier: text1
+        type: Text
+        label: 'Box text'
+
+  - identifier: box2
+    type: Palette
+    label: 'Box 2 (First Row)'
+    fields:
+      - identifier: color2
+        type: Color
+        label: 'Background color'
+        default: '#005881'
+      - identifier: image2
+        type: File
+        label: 'Icon'
+        allowed: common-media-types
+        minitems: 1
+        maxitems: 1
+      - identifier: text2
+        type: Text
+        label: 'Box text'
+  - identifier: box3
+    type: Palette
+    label: 'Box 3 (Second Row)'
+    fields:
+      - identifier: color3
+        type: Color
+        label: 'Background color'
+        default: '#E4A600'
+      - identifier: image3
+        type: File
+        label: 'Icon'
+        allowed: common-media-types
+        minitems: 1
+        maxitems: 1
+      - identifier: text3
+        type: Text
+        label: 'Box text'
+
+  - identifier: box4
+    type: Palette
+    label: 'Box 4 (Second Row)'
+    fields:
+      - identifier: color4
+        type: Color
+        label: 'Background color'
+        default: '#00B5A6'
+      - identifier: image4
+        type: File
+        label: 'Icon'
+        allowed: common-media-types
+        minitems: 1
+        maxitems: 1
+      - identifier: text4
+        type: Text
+        label: 'Box text'
+  - identifier: palette_3
+    type: Palette
+    label: 'Image and Its Position'
+    fields:
+      - identifier: image
+        useExistingField: true
+        label: 'Image'
+        maxitems: 1
+        minitems: 1
+      - identifier: select
+        type: Select
+        label: 'Select Image Position.'
+        description: 'Select the side on which the image should be displayed (left or right).'
+        renderType: selectSingle
+        items:
+          - label: 'Right'
+            value: 0
+          - label: 'Left'
+            value: 1

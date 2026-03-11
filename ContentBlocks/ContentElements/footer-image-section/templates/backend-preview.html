@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+    <f:if condition="{data.image}">
+        <f:variable name="image" value="{data.image.0}" />
+
+        <div class="background-image"
+             style="
+                background-image: url('{f:uri.image(image: image, treatIdAsReference: 1)}');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 200px;
+                width: 100%;
+             ">
+        </div>
+    </f:if>
+
+</html>

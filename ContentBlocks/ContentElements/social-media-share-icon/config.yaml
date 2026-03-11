@@ -1,0 +1,36 @@
+name: aashro/social-media-share-icon
+prefixFields: false
+fields:
+  - identifier: bodytext
+    useExistingField: true
+    label: 'Text'
+    enableRichtext: true
+    richtextConfiguration: default
+  - identifier: select
+    type: Select
+    label: 'Text position'
+    renderType: selectSingle
+    items:
+      - label: 'Left'
+        value: one
+      - label: 'Right'
+        value: two
+  - identifier: socialmedia
+    label: 'Add social icon and link'
+    description: 'You can add link on icon by adding link into metadata link field of image.'
+    minitems: 1
+    type: Collection
+    labelField: image
+    Label: 
+    maxitems: 20
+    fields:
+      - identifier: image
+        type: File
+        label: 'Image'
+        minitems: 1
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: bgcolor
+        type: Color
+        label: 'Background color'
+        default: '#3b5998'
