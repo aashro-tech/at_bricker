@@ -1,6 +1,6 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
-
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Preview" />
+<f:section name="Content">
     <f:asset.css identifier="footer-text-section">
         .footer-text-section a { pointer-events: none; }
     </f:asset.css>
@@ -10,4 +10,6 @@
             <f:sanitize.html>{data.bodytext}</f:sanitize.html>
         </div>
     </f:if>
+</f:section>
+
 </html>

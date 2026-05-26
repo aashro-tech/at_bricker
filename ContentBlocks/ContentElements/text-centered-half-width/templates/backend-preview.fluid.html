@@ -1,6 +1,6 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-      data-namespace-typo3-fluid="true">
-
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Preview" />
+<f:section name="Content">
     <f:asset.css identifier="footer-text-section">
         .text-section a { pointer-events: none; }
         .text-section .grid {max-width: 20rem;}
@@ -11,8 +11,11 @@
     </f:asset.css>
 
     <f:if condition="{data.bodytext}">
-        <section class="grid section margin-bottom background-dark text-section" style="background-color: {data.color1} !important">
+        <section class="grid section margin-bottom background-dark text-section"
+            style="background-color: {data.color1} !important;">
             <f:sanitize.html>{data.bodytext}</f:sanitize.html>
         </section>
     </f:if>
+</f:section>
+
 </html>
