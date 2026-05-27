@@ -12,7 +12,7 @@
     ],
     "license": "GPL-2.0-or-later",
     "require": {
-        "typo3/cms-core": "^14.3",
+        "typo3/cms-core": "^14",
         "friendsoftypo3/content-blocks": "^2.0.0"
     },
     "autoload": {
@@ -31,7 +31,8 @@
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/public",
-            "extension-key": "at_bricker"
+            "extension-key": "at_bricker",
+            "version": "1.2.1"
         }
     }
 }
