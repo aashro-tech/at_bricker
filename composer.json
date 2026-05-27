@@ -1,6 +1,7 @@
 {
     "name": "aashro/at-bricker",
     "type": "typo3-cms-extension",
+    "version": "1.2.1",
     "description": "A TYPO3 extension that adds customizable brick-based content elements and layouts.",
     "authors": [
         {
@@ -31,8 +32,8 @@
         "typo3/cms": {
             "cms-package-dir": "{$vendor-dir}/typo3/cms",
             "web-dir": ".Build/public",
-            "extension-key": "at_bricker",
-            "version": "1.2.1"
+            "extension-key": "at_bricker"
+            
         }
     }
 }
